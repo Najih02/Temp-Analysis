@@ -129,8 +129,7 @@ function Hero() {
   )
 }
 
-function ExperienceItem({ item, index }: { item: Experience, index: number }) {
-  const odd = index % 2 === 0
+function ExperienceItem({ item }: { item: Experience }) {
   return (
     <motion.li
       className="card"
@@ -160,7 +159,7 @@ function ExperienceSection() {
         <h2>Experience</h2>
         <ul style={{ display: 'grid', gap: 16, padding: 0 }}>
           {experiences.map((e, i) => (
-            <ExperienceItem key={i} item={e} index={i} />
+            <ExperienceItem key={i} item={e} />
           ))}
         </ul>
       </div>
